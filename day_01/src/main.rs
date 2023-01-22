@@ -30,11 +30,6 @@ fn main() {
                         max_reindeers[min_max_idx] = current_reindeer_number;
                     }
                     
-                    // //check if sum is max
-                    // if current_sum > max_sum {
-                    //     max_sum = current_sum;
-                    //     max_reindeer_number = current_reindeer_number;
-                    // }
                     current_reindeer_number += 1;
                     current_sum = 0;
                 } else if let Ok(num) = ip.parse::<i64>() {
@@ -56,7 +51,6 @@ fn main() {
         .unwrap();
     println!("Reindeer number {} is the most loaded with {} calories", max_reindeers[max_idx], max_sums[max_idx]);
     println!("Reindeer numbers {}, {}, and {} are the most loaded with a total of {} calories", max_reindeers[0], max_reindeers[1], max_reindeers[2], top_three_sum);
-    // print answer
 }
 
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
